@@ -1,15 +1,255 @@
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html>
 <head>
-  <link rel = "stylesheet" href = "../styles/style.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>НАПОДЕНИЕ БАГОВ</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <!-- отключаем кэш -->
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <!-- отключаем возможность автоматически изменять масштаб приложения для смартфонов  -->
+  <meta name="HandheldFriendly" content="True"/>
+  <!-- чтобы мобильные браузеры не пытались обнаружить на веб-странице телефоны и адреса -->
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="format-detection" content="address=no"/>
+  <!-- подключение jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-2.1.3.min.js"><\/script>')</script>
+  <style>
+    body {
+      font-size: 100%;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    * {
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: 1em;
+    }
+
+    /* предотвращение выделения текста, где не надо*/
+    *, body
+    {
+      -moz-user-select: -moz-none;
+      -o-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    input, textarea
+    {
+      -moz-user-select: text;
+      -o-user-select: text;
+      -khtml-user-select: text;
+      -webkit-user-select: text;
+      user-select: text;
+    }
+
+    /*********************/
+
+    .wrap {
+      background-color: #fff;
+      margin: 0 auto;
+      padding: 10px;
+      overflow: auto;
+      text-align: center;
+    }
+
+    #IPage {
+      background-color: #fff;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    button {
+      margin-top: 15px;
+    }
+
+    input[type="button"]  {
+      float: left;
+      width: 140px;
+      height: 40px;
+      margin: 0 10px 5px 10px;
+      -webkit-box-shadow: 0px 0px 8px blue;
+      box-shadow: 0px 0px 8px blue;
+      font: bold 0.8em Arial;
+      color: #191970;
+      outline: none;
+    }
+    input[type="button"]:focus {
+      outline: none;
+    }
+
+
+
+    #start {
+      text-align: center;
+      overflow: auto;
+    }
+
+    #mainFrame {
+      margin: 10px auto;
+      text-align: center;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    #proectHelpFrame {
+      text-align: center;
+      overflow: hidden;
+      margin: 10px auto;
+    }
+
+    #Menu {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    ul.Sradio {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    ul.Sradio li {
+      margin: 5px 10px 5px 0;
+    }
+
+    .Choice {
+      width: 200px;
+      text-align: left;
+      margin: 0 auto 20px auto;
+    }
+
+    label {
+      margin-left: 10px;
+    }
+
+
+    table {
+      border: solid 1px black;
+      border-collapse: collapse;
+      margin: 0 auto 10px auto;
+    }
+
+    caption {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: blue;
+      margin: 10px 0;
+    }
+
+    td, th {
+      text-align: center;
+      background: #fff;
+      border: 1px solid black;
+      padding: 5px 10px;
+      font-size: 1em;
+    }
+
+    .Name {
+      text-align: left;
+      min-width: 150px;
+
+    }
+
+    .Help  img{
+      width: 150px;
+      padding: 5px;
+    }
+
+    .Shadow {
+      -webkit-box-shadow: 0px 0px 8px #333333;
+      box-shadow: 0px 0px 8px #333333;
+    }
+
+    @media only all and (min-width: 725px) {
+      h2  {
+        padding-right: 200px;
+      }
+
+      #IPage {
+        margin-right: 200px;
+      }
+
+      input[type="button"]  {
+        width: 150px;
+        height: 50px;
+        -webkit-box-shadow: 0px 0px 8px blue;
+        box-shadow: 0px 0px 8px blue;
+        font: bold 0.8em Arial;
+        color: #191970;
+        text-align: center;
+      }
+
+      #Menu  > .Active {
+        color: #be0e1b;
+        -webkit-box-shadow: 0px 0px 8px #be0e1b;
+        box-shadow: 0px 0px 8px #be0e1b;
+      }
+
+    }
+
+
+    @media only all and (min-width: 1201px) {
+      .wrap {
+        width: 1100px;
+        margin: 0 auto;
+      }
+
+      #mainFrame {
+        float: right;
+        margin-top: 0px;
+      }
+
+      #Menu  > .Active {
+        margin: 0 auto;
+        color: #be0e1b;
+        -webkit-box-shadow: 0px 0px 8px #be0e1b;
+        box-shadow: 0px 0px 8px #be0e1b;
+      }
+
+    }
+  </style>
 </head>
 <body>
-<canvas id = "canvas" width = "1000" height = "640"></canvas>
-<script src = "../apps/startGame.js"></script>
-<script src = "../apps/initImage.js"></script>
-<script src = "../apps/drowPlayers.js"></script>
-<script src = "../apps/updateGames.js"></script>
-<script src = "../apps/collision.js"></script>
+<div class="wrap">
+  <h2>НАПАДЕНИЕ БАГОВ</h2>
+  <div id="Menu">
+    <p>
+      <input type=button value='Главная' onclick='SwitchToMainPage()'>
+      <input type=button value='Играть' onclick='SwitchToGame()'>
+      <input type=button value='Таблица рекордов' onclick='SwitchToWinnersPage()'>
+    </p>
+
+  </div>
+
+  <div id='IPage'>
+  </div>
+
+</div>
+
+<canvas id="canvas" style="display: none"></canvas>
+<script src='../apps/collision.js'></script>
+<script src='../apps/drowPlayers.js'></script>
+<script src='../apps/initImage.js'></script>
+<script src='../apps/startGame.js'></script>
+<script src='../apps/updateGames.js'></script>
+<script src='../apps/spa.js'></script>
+<script src='../apps/records.js'></script>
+
+
+
+
+
+
+
 </body>
 </html>

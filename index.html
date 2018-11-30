@@ -1,11 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>100 coins</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <!-- подключение jQuery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
+
 </head>
 <body>
+<audio id='audio' autoplay='' preload='metadata' loop=''>
+  <source src="sound/che.mp3" type="audio/mpeg">
+</audio>
+
+<div class="header">
+  <div class="logoHeader">
+    <span>inroad</span>
+  </div>
+</div>
+
+<div id="menu">
+  <input type=button value='Главная' class="items2" onclick='switchToMenu()'>
+  <input type=button value='Играть' class="items2" onclick='switchToGame()'>
+  <input type=button value='Результаты' class="items2" onclick='switchToRecords()'>
+</div>
+<div id="game">
+  <canvas id="canvas">Если вы видите это сообщение, то у вас не поддерживается Canvas. Обновите браузер.</canvas>
+</div>
+
+<div id="recordsMenu">hhvhbjj</div>
+
+<div id="valid">
+  <input type="text" placeholder="Введите Ваше имя" id="name">
+  <button id="newRecord">запомнить меня</button>
+</div>
+<!-- подключение скриптов -->
+<script src = "apps/startGame.js"></script>
+<script src = "apps/initImage.js"></script>
+<script src = "apps/drowPlayers.js"></script>
+<script src = "apps/updateGames.js"></script>
+<script src = "apps/collision.js"></script>
+<script src="apps/spa.js"></script>
+<script src="apps/records.js"></script>
 
 
 </body>

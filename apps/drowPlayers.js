@@ -2,7 +2,7 @@
 
 const player = {
     size: 64,
-    x: 300,
+    x:300,
     y: 210,
     jumping: false,
     falling: true,
@@ -12,17 +12,18 @@ const player = {
     jumpAcceleration: 0.4,
     fallSpeed: 0,
     fallAcceleration: 0.6,
-    alive: false,
+    alive: true,
     image: new Image(),
 };
 
-function bot(x){
+let Bot = function (x) {
     this.x = x;
-    this.y = 400-64;
+    this.y = 452 - 64;
     this.size = 64;
     this.speed = 6;
     this.image = new Image();
-}
+};
+
 
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -37,9 +38,9 @@ function draw(){
     ctx.fillText('TIME:' +points, 110, 80);
     drawBots();
     //Heroy(player.x, player.y);
-    if(!player.alive){
+   /* if(!player.alive){
         ctx.drawImage(replayImage, 0, 0);
-    }
+    }*/
 }
 
 function drawBots(){

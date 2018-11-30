@@ -65,16 +65,16 @@ function generatePacksOfBots(){
     const numBots = Math.floor(Math.random() * 2);
     switch(numBots){
         case 0:
-            bots.push(new bot(canvas.width));
+            bots.push(new Bot(canvas.width));
             break;
         case 1:
-            bots.push(new bot(canvas.width));
-            bots.push(new bot(canvas.width + 70));
+            bots.push(new Bot(canvas.width));
+            bots.push(new Bot(canvas.width + 70));
             break;
         case 2:
-            bots.push(new bot(canvas.width));
-            bots.push(new bot(canvas.width + 70));
-            bots.push(new bot(canvas.width + 140));
+            bots.push(new Bot(canvas.width));
+            bots.push(new Bot(canvas.width + 70));
+            bots.push(new Bot(canvas.width + 140));
             break;
     }
 }

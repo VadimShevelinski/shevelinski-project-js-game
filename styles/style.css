@@ -1,10 +1,96 @@
-div{
-  margin: 0 auto;
-  width: 800px;
-  height: 522px;
-  text-align: center;
-  background-size: cover;
+
+
+#menu, #recordsMenu, #valid {
+  margin: 5%;
+  width: 30%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  border: 1px solid cornflowerblue;
+  border-radius: 20px;
+  background-color: rgb(66, 181, 152);
+  padding: 20px;
 }
-#canvas {
-  margin: 0 auto;
+
+#storeUserName, #showRecords, #start, #userName, #backToMenu {
+  display: block;
+  margin: 5px auto;
+  background-color: rgba(173, 255, 47, 0.57);
+  border: 1px solid greenyellow;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#scores {
+  position: absolute;
+  margin: 25px;
+  font-family: "Comic Sans MS" sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+#storeUserName, #userName {
+  display: none;
+}
+
+body  {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  background: #fff ;
+  background: url('../image/bbg.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*overflow:hidden;*/
+  min-width: 950px;
+
+}
+
+.header{
+  background-color: #457981;
+  height:70px;
+  width:100%;
+  overflow:hidden;
+  border-bottom: 7px solid rgba(0,0,0,0.08);
+}
+
+.logoHeader {
+  width: 250px;
+  height: 50px;
+  margin-left: 10%;
+  z-index: 9;
+  font-family: 'Bevan', cursive;
+  font-size: 45px;
+  color:#F9ECAA;
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+.logoHeader span{
+  color:#FFD819;
+}
+
+input[type="button"] {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 40px;
+  border: 2px solid rgb(66, 181, 152);
+  border-radius: 20%;
+  background-color: rgb(66, 181, 152);
+  color: darkcyan;
+  font-size:15px;
+  font-weight:700;
+  margin:30px auto;
+}
+input[value]{
+  text-align: center;
+}
+input[type="button"]:hover {
+  background: #6E959C;
+  color: #fff;
+  border: 2px solid #F9ECAA;
 }

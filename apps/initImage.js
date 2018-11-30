@@ -5,7 +5,7 @@ const replayImage = new Image();
 
 const building1 = {
     x: 0,
-    y: 400,
+    y: 452,
     size: 2313,
     speed: 4,
     image: new Image()
@@ -13,8 +13,8 @@ const building1 = {
 
 const building2 = {
     x: 2314,
-    y: 400,
-    size: 1155,
+    y: 452,
+    size: 2313,
     speed: 4,
     image: new Image()
 };
@@ -53,9 +53,9 @@ botAnimation[3].src = "../image/bot4.png";
 botAnimation[4].src = "../image/bot5.png";
 //фон и элементы игры
 replayImage.src = "../image/repl.png";
-backImage.src = "../image/game-background.jpg";
+backImage.src = "../image/bg.jpg";
 building1.image.src = "../image/building1.png";
-building2.image.src = "../image/building2.png";
+building2.image.src = "../image/building1.png";
 star.image.src = "../image/star.png";
 
 function managePlayerAnimation(){

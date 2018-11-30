@@ -18,6 +18,7 @@ function checkPlayerCollision(){
             testBot.y + reduction < player.y + player.size - reduction &&
             testBot.y + testBot.size - reduction > player.y + reduction){
             player.alive = false;
+            gameOver();
         }
     }
     reduction = 5;
