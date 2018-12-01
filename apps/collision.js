@@ -18,7 +18,9 @@ function checkPlayerCollision(){
             testBot.y + reduction < player.y + player.size - reduction &&
             testBot.y + testBot.size - reduction > player.y + reduction){
             player.alive = false;
-            gameOver();
+            records.newPlaeyr();
+            //SwitchToWinnersPage();
+
         }
     }
     reduction = 5;
@@ -29,4 +31,11 @@ function checkPlayerCollision(){
         star.x = 1100;
         points += 10;
     }
+
+}
+
+
+
+function showRecords() {
+    records.getHighscores();
 }

@@ -40,23 +40,23 @@ for(let i = 0; i < 5; i++){
 }
 
 //игрок
-playerAnimation[0].src = "../image/player1.png";
-playerAnimation[1].src = "../image/player2.png";
-playerAnimation[2].src = "../image/player3.png";
-playerAnimation[3].src = "../image/player4.png";
-playerAnimation[4].src = "../image/player5.png";
+playerAnimation[0].src = "image/player1.png";
+playerAnimation[1].src = "image/player2.png";
+playerAnimation[2].src = "image/player3.png";
+playerAnimation[3].src = "image/player4.png";
+playerAnimation[4].src = "image/player5.png";
 //боты
-botAnimation[0].src = "../image/bot1.png";
-botAnimation[1].src = "../image/bot2.png";
-botAnimation[2].src = "../image/bot3.png";
-botAnimation[3].src = "../image/bot4.png";
-botAnimation[4].src = "../image/bot5.png";
+botAnimation[0].src = "image/bot1.png";
+botAnimation[1].src = "image/bot2.png";
+botAnimation[2].src = "image/bot3.png";
+botAnimation[3].src = "image/bot4.png";
+botAnimation[4].src = "image/bot5.png";
 //фон и элементы игры
-replayImage.src = "../image/repl.png";
-backImage.src = "../image/bg.jpg";
-building1.image.src = "../image/building1.png";
-building2.image.src = "../image/building1.png";
-star.image.src = "../image/star.png";
+replayImage.src = "image/repl.png";
+backImage.src = "image/bg.jpg";
+building1.image.src = "image/building1.png";
+building2.image.src = "image/building1.png";
+star.image.src = "image/star.png";
 
 function managePlayerAnimation(){
     if(player.jumping){

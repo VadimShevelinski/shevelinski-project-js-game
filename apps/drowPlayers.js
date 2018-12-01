@@ -33,14 +33,14 @@ function draw(){
     ctx.drawImage(star.image, star.x, star.y);
     ctx.drawImage(player.image, player.x, player.y - 30);
     ctx.font = "bold 40px Helvetica";
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "#FF0000";
     ctx.textAlign = "center";
-    ctx.fillText('TIME:' +points, 110, 80);
+    ctx.fillText('СЧЕТ:' +points, 110, 80);
     drawBots();
     //Heroy(player.x, player.y);
-   /* if(!player.alive){
-        ctx.drawImage(replayImage, 0, 0);
-    }*/
+   if(!player.alive){
+        ctx.fillText('КЛИКНИТЕ ЧТОБЫ НАЧАТЬ ИГРУ', canvas.width*0.50, canvas.height*0.5);
+    }
 }
 
 function drawBots(){
