@@ -25,10 +25,10 @@ function update(){
         checkPlayerCollision();
         checkBottomCollision();
         trackTime();
-       // audio.play();
+       audio.play();
 
     } else {
-       // audio.pause();
+       audio.pause();
     }
 
 }
