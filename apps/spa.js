@@ -38,13 +38,14 @@ function UpdateToState(NewStateH)
             //предварительная информация об игре и ее правилах
             $('.Active').toggleClass();
             $('input[value="Главная"]').toggleClass('Active');
-            PageHTML+="</br></br><h3>игра НАПАДЕНИЕ БАГОВ</h3>";
+            PageHTML+="</br></br><h3>НАПАДЕНИЕ БАГОВ</h3>";
             PageHTML+="<p>ВСЕ мы неоднократно встречаемся с багами, и конечно же нам хочеться научиться их избегать.</p>";
             PageHTML+="<p>Данная игра предоставляет такую возможность, и более того это и есть главная задача игры!</p>";
             PageHTML+="<p>Давайте сыграем и посмотрим насколько хорошо вы справитесь с багами!</br>И главное - насколько хорошо я, как разработчик справился с этой задачей </p>";
             PageHTML+="<h4>Правила игры</h4>";
             PageHTML+="<p>Правила очень просты - кликайте, либо нажимайте на тачпад чтобы перепрыгнуть злых багов</p>";
             canvas.style.display = 'none';
+            document.getElementById('IPage').style.display = 'block';
             document.getElementById('IChat').style.display = 'none';
             player.alive = false;
             break;
@@ -57,6 +58,7 @@ function UpdateToState(NewStateH)
              PageHTML+='</div>';
             canvas.style.display = 'block';
             document.getElementById('IChat').style.display = 'none';
+            document.getElementById('IPage').style.display = 'none';
             break;
 
 
@@ -91,9 +93,9 @@ function SwitchToStateFromURLHash() {
     // (по-хорошему надо ещё убирать восклицательный знак, если есть)
     let StateStr=URLHash.substr(1);
 
-    if ( StateStr!="" ) // если закладка непустая, читаем из неё состояние и отображаем
+    if ( StateStr !== "" ) // если закладка непустая, читаем из неё состояние и отображаем
     {
-        let PartsA=StateStr.split("_")
+        let PartsA=StateStr.split("_");
 
         let NewStateH={ pagename: PartsA[0] }; // первая часть закладки - номер страницы
 

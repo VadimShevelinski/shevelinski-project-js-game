@@ -33,7 +33,7 @@ function draw(){
     ctx.drawImage(star.image, star.x, star.y);
     ctx.drawImage(player.image, player.x, player.y - 30);
     ctx.font = "bold 40px Helvetica";
-    ctx.fillStyle = "#FF0000";
+    ctx.fillStyle = "rgb(219, 186, 19)";
     ctx.textAlign = "center";
     ctx.fillText('СЧЕТ:' +points, 110, 80);
     drawBots();

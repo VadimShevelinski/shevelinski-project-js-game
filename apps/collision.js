@@ -19,7 +19,6 @@ function checkPlayerCollision(){
             testBot.y + testBot.size - reduction > player.y + reduction){
             player.alive = false;
             records.newPlaeyr();
-            //SwitchToWinnersPage();
 
         }
     }

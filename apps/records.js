@@ -1,10 +1,10 @@
-var records = new function () {
-    var StringName = 'Shevel';
-    var password; //переменная для хранения пароля
-    var AjaxHandlerScript = 'http://fe.it-academy.by/AjaxStringStorage2.php';
-    var recordsLength = 10;
+let records = new function () {
+    let StringName = 'Shevel';
+    let password; //переменная для хранения пароля
+    let AjaxHandlerScript = 'http://fe.it-academy.by/AjaxStringStorage2.php';
+    let recordsLength = 10;
 
-    var userName, score;
+    let userName, score;
     let recordStorage = {};
 
     this.newPlaeyr = function () {
@@ -19,11 +19,6 @@ var records = new function () {
         }
         //собираем информацию о прошедшей игре для нового участника для добавления в таблицу победителей
         score = points;
-        recordStorage.push({userName: userName, score: score});
-        if (recordStorage.length > 20) {
-            recordStorage = recordStorage.slice(recordStorage.length - 20);
-        }
-
         /*обновлённый массив сообщений сохраняется в сервис операцией "UPDATE",
         с указанием того же пароля, который был сгенерирован при операции "LOCKGET".*/
         addNewResult(userName, score);
@@ -35,14 +30,14 @@ var records = new function () {
 // функция проверяет, наблал ли игрок достаточно очков, чтобы попасть в таблицу рекордов,
 // и возвращает это значение, добавляет его в таблицу
     function addRecordToTable() {
-        var addPossible = false;
-        var userScoreExists;
-        var userResult = {
+        let addPossible = false;
+        let userScoreExists;
+        let userResult = {
             name: userName,
             score: score
         };
         // пытаемся найти в таблице результат этого игрока
-        var existingUserScore = recordStorage.filter(function (result) {
+        let existingUserScore = recordStorage.filter(function (result) {
             return userName === result.name;
         });
         userScoreExists = existingUserScore.length > 0;
@@ -117,13 +112,13 @@ var records = new function () {
 
 //функция отображения таблицы победителей
     function ShowTable() {
-        var PageHTML = "",
+        let PageHTML = "",
             name,
             score;
         PageHTML += '<table>';
         PageHTML += '<tr><th>Место</th><th>Имя игрока</th><th>Очки</th></tr>';
 
-        for (var i = 0; i < recordStorage.length; i++) {
+        for (let i = 0; i < recordStorage.length; i++) {
             name = recordStorage[i].name;
             score = recordStorage[i].score;
             PageHTML += '<tr><td>' + (i + 1) + '</td><td class="userName">' + name + '</td><td class="userScore">' + score + '</td></td></tr>';
@@ -148,7 +143,7 @@ var records = new function () {
     }
 
     function tableFromString(json) {
-        var result = [];
+        let result = [];
         if (json != '') {
             result = JSON.parse(json);
         }
@@ -164,18 +159,19 @@ var records = new function () {
             alert("Извините, таблицы рекордов временно недоступны.\n" + ResultH.error);
         } else {
             recordStorage = tableFromString(ResultH.result);
-            showRecords();
+
 
             if (!addRecordToTable()) {
                 alert("Вы набрали недостаточно очков для таблицы рекордов");
             }
         }
+        showRecords();
     }
 
 
 // вывод сообщения об ошибке при записи
     function UpdateReady(ResultH) {
-        if (ResultH.error != undefined) {
+        if (ResultH.error !== undefined) {
             alert("Извините, таблицы рекордов временно недоступны.\n" + ResultH.error);
         }
 
