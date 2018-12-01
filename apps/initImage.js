@@ -1,11 +1,10 @@
 'use strict';
 
 const backImage = new Image();
-const replayImage = new Image();
 
 const building1 = {
     x: 0,
-    y: 452,
+    y: canvas.height+300,
     size: 2313,
     speed: 4,
     image: new Image()
@@ -13,7 +12,7 @@ const building1 = {
 
 const building2 = {
     x: 2314,
-    y: 452,
+    y: canvas.height+300,
     size: 2313,
     speed: 4,
     image: new Image()
@@ -52,7 +51,6 @@ botAnimation[2].src = "image/bot3.png";
 botAnimation[3].src = "image/bot4.png";
 botAnimation[4].src = "image/bot5.png";
 //фон и элементы игры
-replayImage.src = "image/repl.png";
 backImage.src = "image/bg.jpg";
 building1.image.src = "image/building1.png";
 building2.image.src = "image/building1.png";

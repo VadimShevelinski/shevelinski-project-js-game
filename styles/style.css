@@ -19,8 +19,12 @@ body {
   font-size: 25px;
 }
 
-h2 {
-  font-size: 1.5em;
+h1 {
+  color: orangered;
+}
+
+h3 {
+  color: orangered;
 }
 
 p {
@@ -28,41 +32,23 @@ p {
 }
 
 button {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 input[type="button"]  {
   width: 140px;
   height: 40px;
   margin: 0 10px 5px 10px;
+  border-radius: 40%;
   -webkit-box-shadow: 0px 0px 8px blue;
   box-shadow: 0px 0px 8px blue;
-  font: bold 0.8em Arial;
-  color: #191970;
+  font: bold 20px Arial;
+  color: rgb(219, 186, 19);
+  background: teal;
   outline: none;
 }
 input[type="button"]:focus {
   outline: none;
-}
-
-
-
-#start {
-  text-align: center;
-  overflow: auto;
-}
-
-#mainFrame {
-  margin: 10px auto;
-  text-align: center;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-#proectHelpFrame {
-  text-align: center;
-  overflow: hidden;
-  margin: 10px auto;
 }
 
 #Menu {
@@ -71,69 +57,21 @@ input[type="button"]:focus {
   margin-bottom: 20px;
 }
 
-ul.Sradio {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-ul.Sradio li {
-  margin: 5px 10px 5px 0;
-}
-
-.Choice {
-  width: 200px;
-  text-align: left;
-  margin: 0 auto 20px auto;
-}
-
-label {
-  margin-left: 10px;
-}
-
 
 table {
+  width: 40%;
   border: solid 1px black;
   border-collapse: collapse;
   margin: 0 auto 10px auto;
+
 }
 
-caption {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: blue;
-  margin: 10px 0;
-}
 
 td, th {
   text-align: center;
-  background: #fff;
+  background: seagreen;
   border: 1px solid black;
   padding: 5px 10px;
-  font-size: 1em;
+  font-size: 3em;
 }
 
-@media only all and (min-width: 725px) {
-  h2  {
-    padding-right: 200px;
-  }
-
-
-
-  input[type="button"]  {
-    width: 150px;
-    height: 50px;
-    -webkit-box-shadow: 0px 0px 8px blue;
-    box-shadow: 0px 0px 8px blue;
-    font: bold 0.8em Arial;
-    color: #191970;
-    text-align: center;
-  }
-
-  #Menu  > .Active {
-    color: #be0e1b;
-    -webkit-box-shadow: 0px 0px 8px #be0e1b;
-    box-shadow: 0px 0px 8px #be0e1b;
-  }
-
-}

@@ -33,8 +33,6 @@ function checkPlayerCollision(){
 
 }
 
-
-
 function showRecords() {
     records.getHighscores();
 }

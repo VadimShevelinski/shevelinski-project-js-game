@@ -3,7 +3,6 @@ let records = new function () {
     let password; //переменная для хранения пароля
     let AjaxHandlerScript = 'http://fe.it-academy.by/AjaxStringStorage2.php';
     let recordsLength = 10;
-
     let userName, score;
     let recordStorage = {};
 
@@ -153,14 +152,11 @@ let records = new function () {
         return result;
     }
 
-
     function LockGetReady(ResultH) {
         if (ResultH.error != undefined) {
             alert("Извините, таблицы рекордов временно недоступны.\n" + ResultH.error);
         } else {
             recordStorage = tableFromString(ResultH.result);
-
-
             if (!addRecordToTable()) {
                 alert("Вы набрали недостаточно очков для таблицы рекордов");
             }

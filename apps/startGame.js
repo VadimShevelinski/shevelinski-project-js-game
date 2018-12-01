@@ -22,13 +22,13 @@ function update(){
         updateBuilding();
         updateStar();
         updateBots();
-        checkBottomCollision();
         checkPlayerCollision();
+        checkBottomCollision();
         trackTime();
-        audio.play();
+       // audio.play();
 
     } else {
-        audio.pause();
+       // audio.pause();
     }
 
 }

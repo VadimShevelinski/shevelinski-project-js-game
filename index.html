@@ -1,13 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   <title>НАПОДЕНИЕ БАГОВ</title>
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <!-- отключаем кэш -->
   <meta http-equiv="Cache-Control" content="no-cache"/>
-  <!-- отключаем возможность автоматически изменять масштаб приложения для смартфонов  -->
-  <meta name="HandheldFriendly" content="True"/>
   <!-- чтобы мобильные браузеры не пытались обнаружить на веб-странице телефоны и адреса -->
   <meta name="format-detection" content="telephone=no"/>
   <meta name="format-detection" content="address=no"/>
@@ -16,26 +15,25 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<audio src="sound/che.mp3" id="audio"></audio>
+  <audio src="sound/che.mp3" id="audio"></audio>
   <div id="Menu">
     <p>
       <input type=button value='Главная' onclick='SwitchToMainPage()'>
       <input type=button value='Играть' id="startGame" onclick='SwitchToGame()'>
-      <input type=button value='Таблица рекордов'  onclick='SwitchToWinnersPage()'>
+      <input type=button value='Рекорды' onclick='SwitchToWinnersPage()'>
     </p>
-
   </div>
-
   <div id='IPage'>
+  </div>
+  <div id='IChat' style='display: none'></div>
 
-</div>
-<div id='IChat' style='display: none'></div>
-
-<canvas id="canvas" style="display: none"></canvas>
-<script src='apps/collision.js'></script>
-<script src='apps/drowPlayers.js'></script>
-<script src='apps/initImage.js'></script>
-<script src='apps/startGame.js'></script>
-<script src='apps/updateGames.js'></script>
-<script src='apps/spa.js'></script>
-<script src='apps/records.js'></script>
+  <canvas id="canvas" style="display: none"></canvas>
+  <script src='apps/collision.js'></script>
+  <script src='apps/drowPlayers.js'></script>
+  <script src='apps/initImage.js'></script>
+  <script src='apps/startGame.js'></script>
+  <script src='apps/updateGames.js'></script>
+  <script src='apps/spa.js'></script>
+  <script src='apps/records.js'></script>
+</body>
+</html>
