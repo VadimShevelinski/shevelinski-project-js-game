@@ -20,14 +20,12 @@ window.onhashchange=SwitchToStateFromURLHash;
 // текущее состояние приложения
 let SPAStateH={};
 
-
 // устанавливает полученное состояние приложения как текущее
 // и обновляет ВСЮ вариабельную часть веб-страницы
 // соответственно этому состоянию
 function UpdateToState(NewStateH)
 {
     SPAStateH=NewStateH; // устанавливаем - это теперь текущее состояние
-
     // обновляем вариабельную часть страницы под текущее состояние
     let PageHTML="";
     let prizeNum = -1;
@@ -54,12 +52,11 @@ function UpdateToState(NewStateH)
             $('.Active').toggleClass();
             $('input[value="Играть"]').toggleClass('Active');
             PageHTML+='<div id="mainFrame">';
-             PageHTML+='</div>';
+            PageHTML+='</div>';
             canvas.style.display = 'block';
             document.getElementById('IChat').style.display = 'none';
             document.getElementById('IPage').style.display = 'none';
             break;
-
 
         case 'Winners':
             let block  = document.getElementById('IChat');
@@ -72,7 +69,6 @@ function UpdateToState(NewStateH)
     }
     //вставляем новое содержимое для блока IPage
     document.getElementById('IPage').innerHTML=PageHTML;
-
 
     //если Winners осуществляем изменение параметров для игры
     if (SPAStateH.pagename == "Winners") {
@@ -95,9 +91,7 @@ function SwitchToStateFromURLHash() {
     if ( StateStr !== "" ) // если закладка непустая, читаем из неё состояние и отображаем
     {
         let PartsA=StateStr.split("_");
-
         let NewStateH={ pagename: PartsA[0] }; // первая часть закладки - номер страницы
-
         UpdateToState(NewStateH);
     }
     else
@@ -119,18 +113,15 @@ function SwitchToState(NewStateH)
     // т.к. закладка УРЛа изменилась (ЕСЛИ она действительно изменилась)
 }
 
-function SwitchToMainPage()
-{
+function SwitchToMainPage() {
     SwitchToState( { pagename:'Main' } );
 }
 
-function SwitchToWinnersPage()
-{
+function SwitchToWinnersPage() {
     SwitchToState( { pagename:'Winners' } );
 }
 
-function SwitchToGame()
-{
+function SwitchToGame() {
     SwitchToState( { pagename:'Game' } );
 }
 

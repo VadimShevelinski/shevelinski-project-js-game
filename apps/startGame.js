@@ -1,6 +1,6 @@
 const canvas = document.getElementById("canvas");
 canvas.width =  window.innerWidth;
-canvas.height = window.innerHeight - 80;//минус высота header
+canvas.height = window.innerHeight - 80;//минус высота меню
 const ctx = canvas.getContext("2d");
 let audio = document.getElementById('audio');
 

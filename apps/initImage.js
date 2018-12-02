@@ -56,7 +56,7 @@ building1.image.src = "image/building1.png";
 building2.image.src = "image/building1.png";
 star.image.src = "image/star.png";
 
-function managePlayerAnimation(){
+function managePlayerAnimation(){//анимация движения игрока
     if(player.jumping){
         player.image = playerAnimation[3];
     }
@@ -72,7 +72,7 @@ function managePlayerAnimation(){
     }
 }
 
-function manageBotAnimation(){
+function manageBotAnimation(){//анимация ботов
     for(let i = 0; i < bots.length; i++){
         bots[i].image = botAnimation[botFrame];
     }

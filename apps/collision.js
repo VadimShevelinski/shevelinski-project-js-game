@@ -1,6 +1,6 @@
 'use strict';
 
-function checkBottomCollision(){
+function checkBottomCollision(){ //приземление и возможность прыжка
     if(player.y + player.size >= building1.y){
         player.y = building1.y - player.size;
         player.falling = false;
@@ -9,7 +9,7 @@ function checkBottomCollision(){
     }
 }
 
-function checkPlayerCollision(){
+function checkPlayerCollision(){//расчет столкновения
     let reduction = 10;
     for(let i = 0; i < bots.length; i++){
         let testBot = bots[i];

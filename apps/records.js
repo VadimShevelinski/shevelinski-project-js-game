@@ -178,7 +178,7 @@ let records = new function () {
         alert("Извините, таблицы рекордов временно недоступны.\n" + StatusStr + ' ' + ErrorStr);
     }
 
-//функция сравнения по времени для сортировки таблицы
+//функция сравнения по очкам для сортировки таблицы
     function Compare(A, B) {
         return B.score - A.score;
     }

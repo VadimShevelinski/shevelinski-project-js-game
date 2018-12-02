@@ -9,9 +9,6 @@ body {
 
 }
 
-/*********************/
-
-
 #IPage {
   margin: 0 auto;
   text-align: center;
@@ -47,6 +44,7 @@ input[type="button"]  {
   background: teal;
   outline: none;
 }
+
 input[type="button"]:focus {
   outline: none;
 }
@@ -57,7 +55,6 @@ input[type="button"]:focus {
   margin-bottom: 20px;
 }
 
-
 table {
   width: 40%;
   border: solid 1px black;
@@ -65,7 +62,6 @@ table {
   margin: 0 auto 10px auto;
 
 }
-
 
 td, th {
   text-align: center;
